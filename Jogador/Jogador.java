@@ -173,8 +173,7 @@ public class Jogador {
                 System.out.println("        (2x Cruzador, 2x Destroyer, 3x Cruzador Leve, 4x Submarino)");
 
                 System.out.print("Digite o número do preset que deseja usar: ");
-                escolhaPreset = scanner.nextInt();
-                scanner.nextLine(); 
+                Integer.parseInt(scanner.nextLine()); 
 
                 naviosParaPosicionar = gerarPresetNavios(escolhaPreset);
                 if (!naviosParaPosicionar.isEmpty()) {
@@ -263,9 +262,9 @@ public class Jogador {
             for (Navio navio : meusNavios) {
                 if (!navio.foiAfundado()) {
                     System.out.printf("%-5d %-20s %-10s\n", 
-                                      idNavio, 
-                                      navio.getTipoNavio(), 
-                                      navio.podeAtirar() ? "Pronto!" : navio.getTurnosRestantesCooldown() + " turnos");
+                    idNavio, 
+                    navio.getTipoNavio(), 
+                    navio.podeAtirar() ? "Pronto!" : navio.getTurnosRestantesCooldown() + " turnos");
                     idNavio++;
                     if (navio.podeAtirar()) {
                         temNavioAtiravel = true;
@@ -281,8 +280,7 @@ public class Jogador {
 
             System.out.print("Escolha o ID do navio para atirar: ");
             try {
-                int idEscolha = scanner.nextInt();
-                scanner.nextLine();
+                int idEscolha = Integer.parseInt(scanner.nextLine()); 
 
                 idNavio = 1;
                 for (Navio navio : meusNavios) {

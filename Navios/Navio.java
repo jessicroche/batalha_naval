@@ -88,8 +88,7 @@ public abstract class Navio {
                 if(direcao == 0) { // se a direção não for informada, pede para o usuário informar
                     System.out.println("Tamanho navio: " + this.tamanho);
                     System.out.printf("Para que lado " + this.tipoNavio + " deve apontar? (Cima = 1, Baixo = 2, Esquerda = 3, Direita = 4): ");
-                    direcao = scanner.nextInt();
-                    scanner.nextLine();
+                    direcao = Integer.parseInt(scanner.nextLine()); 
                 }
                 boolean ocupado = false; // verifica se as posições estão ocupadas
                 switch(direcao) {
