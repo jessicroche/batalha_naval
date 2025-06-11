@@ -1,0 +1,45 @@
+"manual"
+O jogo pode ser jogado com (jogadores ou bots).
+Cada jogador tem seu tabuleiro de tamanho [tamanho]x[tamanho].
+
+Navios:
+Cada jogador escolhe...
+Cada navio dispara uma salva, com todas as suas armas ao mesmo tempo. Após atirar, cada navio tem turnos de cooldown, onde o navio não pode atirar. O cooldown varia de navio a navio.
+Os tipos de navio são:
+  -Submarino: está submerso, portanto só pode ser atingido por bombas de profundidade. Ataca com 1 torpedo por turno que podem atingir todos os navios, com um cooldown de 1 turno. Ocupa apenas uma célula do tabuleiro. Sempre quando ataca, o submarino tem que vir a superfície, mostrando sua posição ao inimigo, mas submergindo e mudando de posição. O submarino pode se mover por 3 células depois de atacar, dessa forma:
+  0 1 2 3 4
+A ~ ~ x ~ ~
+B ~ x x x ~
+C x x S x x
+D ~ x x x ~
+E ~ ~ x ~ ~
+Quando não tem mais contratorpedeiros na frota inimiga, o submarino fica na superfície por mais um turno, possibilitando que qualquer navio o atinja, se acertarem a posição do submarino depois dele se mover. Obs: O movimento do submarino reinicia o símbolo da célula onde o submarino foi posicionado.
+  -Contratorpedeiro: Navio leve de duas células de tamanho. Pode atacar com seu canhão uma vez por turno, apenas não podendo atingir o Dreadnought. Também ataca com uma bomba de profundidade, num quadrado 2x2, sendo a única arma que pode atingir submarinos submersos. Ambas as armas de um cooldown de 1 turno.
+Bomba:
+  0 1 2 3 4 
+A O o ~ ~ ~      O: local escolhido para soltar a bomba
+B o o ~ ~ ~      o: alcance da bomba
+C ~ ~ ~ ~ ~
+D ~ ~ ~ ~ ~
+E ~ ~ ~ ~ ~
+  -Cruzador leve: navio leve de duas células de tamanho. Pode atacar com seu canhão uma vez por turno, apenas não podendo atingir o Dreadnought. Se o navio acertou um navio leve, ele ganha um tiro extra no mesmo turno. O seu canhão tem um cooldown de 1 turno.
+  -Cruzador: navio pesado de três células de tamanho. Pode atacar com seus canhões duas vezes por turno. Se o navio acertou um navio leve, ele ganha um tiro extra no mesmo turno. Os seus canhões tem um cooldown de 2 turnos.
+  -Navio de guerra: navio pesado de três células de tamanho. Pode atacar com seus canhões três vezes por turno. Se o navio acertou um navio pesado, ele ganha um tiro extra no mesmo turno. Os seus canhões tem um cooldown de 3 turnos.
+  -Dreadnoght: navio pesado de quatro células de tamanho. Pode atacar com seus canhões quatro vezes por turno. Os seus canhões tem um cooldown de 4 turnos. É o navio mais pesado e com melhor armadura, por isso é imune aos canhões de navios leves (mas não a torpedos).
+  
+Informações do tabuleiro:
+"~" : água.
+"x" : erro.
+"o" : local onde a bomba de profundidade explodiu anteriormente.
+"S" : posição onde o submarino estava quando atirou e a posição de seu próprio submarino.
+"s" : submarino afundado.
+"T" : contratorpedeiro.
+"t" : contratorpedeiro afundado.
+"L" : cruzador leve.
+"l" : cruzador leve afundado.
+"C" : cruzador.
+"c" : cruzador afundado.
+"G" : navio de guerra.
+"g" : navio de guerra afundado.
+"D" : dreadnought.
+"d" : dreadnought afundado.

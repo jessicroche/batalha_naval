@@ -1,0 +1,17 @@
+O projeto Batalha Naval é uma implementação em Java do clássico jogo de estratégia naval,
+desenvolvido para lazer e para aprimorar o pensamento tático. Ele permite a jogatina contra
+outro jogador humano ou contra um bot, oferecendo uma experiência de jogo dinâmica. O objetivo
+principal é afundar todos os navios do adversário em um tabuleiro de tamanho configurável, com
+base nas regras do jogo.
+
+A arquitetura do jogo é modular e bem definida, utilizando conceitos fundamentais de Programação
+Orientada a Objetos (POO) em Java. Classes como Jogador, Tabuleiro e Navio representam entidades
+distintas e suas interações. Cada Jogador gerencia seu próprio Tabuleiro, que, por sua vez, é 
+composto por Células e armazena os Navios. Essa estrutura facilita a compreensão do código e futuras manutenções.
+
+Os navios são centrais para a jogabilidade, com diversos tipos, cada um com características e 
+habilidades únicas. Cada Navio é uma subclasse que herda comportamentos e implementa ataques 
+específicos, como torpedos, canhões e bombas de profundidade. O controle de cooldowns e alvos 
+específicos adiciona camadas táticas. No geral, este projeto é um exemplo prático de como 
+princípios de POO em Java são aplicados para criar um sistema funcional e interativo, focado na simulação
+da batalha naval.
